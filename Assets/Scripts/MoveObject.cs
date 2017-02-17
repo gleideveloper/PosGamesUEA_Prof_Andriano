@@ -6,7 +6,7 @@ public class MoveObject : MonoBehaviour {
 
 	public float speed;
 	private float x;
-
+	public float destroyHardle;
 	// Use this for initialization
 	void Start () {
 		
@@ -18,7 +18,7 @@ public class MoveObject : MonoBehaviour {
 		x += speed * Time.deltaTime;
 		transform.position = new Vector3 (x,transform.position.y, transform.position.z);
 
-		if (x <= -5.5f) {
+		if (x <= destroyHardle) {
 			Destroy (transform.gameObject);
 		}
 	}

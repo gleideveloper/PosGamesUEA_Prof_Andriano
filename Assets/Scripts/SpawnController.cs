@@ -11,6 +11,8 @@ public class SpawnController : MonoBehaviour {
 	public float currentTime;
 	private int position;
 	private float y;
+	public float posA;
+	public float posB;
 
 	// Use this for initialization
 	void Start () {
@@ -26,9 +28,9 @@ public class SpawnController : MonoBehaviour {
 			position = Random.Range (1, 100);
 
 			if (position > 50) {
-				y = 0.03f;
+				y = posA;//0.03f;
 			} else {
-				y = 0.65f;
+				y = posB;//0.65f;
 			}
 
 			GameObject tempPrefab = Instantiate (hardlePrefab) as GameObject;
